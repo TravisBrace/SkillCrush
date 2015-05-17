@@ -11,7 +11,7 @@ lat = coordinate.latitude
 lng = coordinate.longitude
 
 today = Time.now.strftime('%w').to_i
-weekday = Time.now.strftime('%A').to_s
+weekday = Time.now.strftime('%w').to_i
 
 ForecastIO.configure do |config|
   config.api_key = '84136514cb4a98b5667db5a5d3ccbab5'
@@ -33,6 +33,10 @@ puts "\n"
    end
 
   case today
+    when weekday
+      puts 'Today'
+    when (weekday + 1)
+      puts 'Tomorrow'
     when 0
       puts 'Sunday'
     when 1
@@ -48,6 +52,7 @@ puts "\n"
     when 6
       puts 'Saturday'
    end
+
 puts "High of #{daily.temperatureMax}"
 puts daily.summary
 
