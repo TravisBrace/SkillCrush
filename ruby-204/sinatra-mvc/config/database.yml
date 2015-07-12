@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: activerecord-template_development
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres
+    
+test:
+  adapter: postgresql
+  database: activerecord-template_test
+  pool: 5
+  host: localhost
+  username: postgres
+  password: postgres

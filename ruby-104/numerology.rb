@@ -1,12 +1,13 @@
 puts "Enter your birthday. Must be in the format MMDDYYYY"
 birthday = gets
-birthday = birthday.chop
-
+birthday = birthday.chomp
+puts birthday
 def get_birth_path_number(birthday)
-  number = birthday[0].to_i + birthday[1].to_i + birthday[2].to_i + birthday[4].to_i + birthday[5].to_i + birthday[6].to_i + birthday[7].to_i
+  number = birthday[0].to_i + birthday[1].to_i + birthday[2].to_i + birthday[3].to_i + birthday[4].to_i + birthday[5].to_i + birthday[6].to_i + birthday[7].to_i
   number = number.to_s
+puts number
   number = number[0].to_i + number[1].to_i
-
+puts number
   if number == 11
     puts "Your numberology number is #{number}"
   elsif number == 22
